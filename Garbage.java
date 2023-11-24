@@ -17,7 +17,8 @@ class Garbage{
         for(int i=0;i<10;i++){
             x y = new x();
         }
-        mem2= r.freeMemory();
+        Runtime g = g.getRuntime();
+        mem2= g.freeMemory();
         System.out.println("Free memory: " + mem2);
         r.gc();
         mem3 = r.freeMemory();
