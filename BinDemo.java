@@ -3,24 +3,23 @@ class BinarySearch {
     int[] arr = new int[10];
     int  mid,high,target;
     int low=0;
-    int binarySearch(int arr[],int target,int n){
-        high=n-1;
-        int flag=-1;
-        while(low<high){
-            mid=(low+high)/2;
-            if(arr[mid]==target){
-                flag=mid;
-            }
-            else if(arr[mid]<target){
-                high = mid-1;
-            }
-            else{
-                low=mid+1;
+    int binarySearch(int arr[], int target, int n) {
+        high = n - 1;
+        int flag = -1;
+        while (low <= high) {
+            mid = (low + high) / 2;
+            if (arr[mid] == target) {
+                flag = mid;
+                break;
+            } else if (arr[mid] < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
             }
         }
         return flag;
-
     }
+    
 }
 
 class BinDemo{
